@@ -1,7 +1,7 @@
 services:
   mikopbx:
     image: mikopbx/mikopbx:latest
-    container_name: mikopbx
+    container_name: miko-pbx
     restart: always
     ports:
       - "80:80"
