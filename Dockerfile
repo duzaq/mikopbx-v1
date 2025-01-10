@@ -39,7 +39,7 @@ WORKDIR /var/spool/mikopbx
 COPY docker-compose.yml .
 
 # Expor portas necessárias (ajuste conforme necessário)
-EXPOSE 80 443 5060 5061
+EXPOSE 80 81 443 444 5060 5061 
 
 # Comando padrão para iniciar o Docker Compose
 CMD ["docker-compose", "up", "-d"]
