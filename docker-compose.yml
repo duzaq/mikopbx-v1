@@ -2,12 +2,17 @@ version: '3.8'
 
 services:
   mikopbx:
-    build: .
+    image: mikopbx/mikopbx:latest
     container_name: mikopbx
-    volumes:
-      - ./cf:/var/spool/mikopbx/cf
-      - ./storage:/var/spool/mikopbx/storage
-    ports:
-      - "5060:5060"  # Porta SIP
-      - "8080:80"    # Porta HTTP
     restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+      - "5060:5060"
+      - "5061:5061"
+    volumes:
+      - /var/spool/mikopbx/cf:/var/spool/mikopbx/cf
+      - /var/spool/mikopbx/storage:/var/spool/mikopbx/storage
+    environment:
+      - TZ=UTC
+    user: "www-user"
