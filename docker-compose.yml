@@ -6,8 +6,8 @@ services:
     ports:
       - "8081:80"
       - "444:443"
-      - "5060:5060"
-      - "5061:5061"
+      - "5061:5060"
+      - "5062:5061"
     volumes:
       - /var/spool/mikopbx/cf:/var/spool/mikopbx/cf
       - /var/spool/mikopbx/storage:/var/spool/mikopbx/storage
