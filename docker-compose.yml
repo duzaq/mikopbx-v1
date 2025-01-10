@@ -14,6 +14,9 @@ services:
     environment:
       - TZ=UTC
     user: "www-user"
+    networks:
+      - mikopbx_network
+      
 networks:
   mikopbx_network:
     driver: bridge
